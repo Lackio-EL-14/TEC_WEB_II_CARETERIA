@@ -1,13 +1,19 @@
 @use "_variables.scss";
-
+@use "_menu.scss";
 header {
     width: 100%;
     position: fixed;
     background-color: variables.$blanco ;
+    top: 0;
+
 }
 
 body {
     font-family: variables.$fuente_principal;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    padding-top: 10%;
 }
 
 nav {
@@ -17,7 +23,7 @@ nav {
     align-items: center;
     margin-left: 5%;
     margin-right: 5%;
-
+    
     #logo {
         display: flex;
         align-items: center;
@@ -50,4 +56,79 @@ nav {
             font-size: 100%;
         }
     }
+}
+
+.piePagina {
+    background-color: rgb(33, 14, 2);
+    color: variables.$naranja_suave;
+    padding: 40px 20px 20px 20px;
+}
+
+.contenedorFooter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.seccionFooter {
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+.tituloLogo {
+    color: variables.$cafe_suave;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    img{
+        width: 25%;
+    }
+}
+
+.tituloSeccion {
+    color:variables.$cafe_suave;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    line-height: 1.5;
+}
+
+.redesSociales {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.iconoRed {
+    background-color: variables.$naranja_suave;
+    color: white;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.iconoRed:hover {
+    background-color: variables.$naranja_leve;
+}
+
+.lineaSeparadora {
+    border: none;
+    border-top: 1px solid variables.$naranja_suave;
+    margin: 20px auto;
+    max-width: 1100px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    color: variables.$naranja_leve;
 }
