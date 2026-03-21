@@ -1,0 +1,53 @@
+@use "_variables.scss";
+
+header {
+    width: 100%;
+    position: fixed;
+    background-color: variables.$blanco ;
+}
+
+body {
+    font-family: variables.$fuente_principal;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    #logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        h2 {
+            margin-left: 0%;
+            font-size: 1.5rem;
+
+        }
+
+        img {
+            width: 15%;
+        }
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    #nav-links {
+        display: flex;
+        justify-content:flex-end;
+        gap: 10%;
+        width: 50%;
+
+        a {
+            text-decoration: none;
+            color: variables.$plomo;
+            font-size: 100%;
+        }
+    }
+}
