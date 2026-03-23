@@ -1,3 +1,106 @@
+.hero {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  height: 600px;
+}
+.hero .titulo-principal {
+  size: 8cm;
+}
+.hero .p-banner {
+  color: goldenrod;
+}
+.hero .ver-menu {
+  background-color: #c2702d;
+  border-radius: 4rem;
+  padding: 15px 30px;
+}
+.hero .ver-menu .btn-menu {
+  color: black;
+}
+
+.detalles {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: rgb(123, 51, 6);
+}
+.detalles .tarjeta-detalles {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.detalles .tarjeta-detalles {
+  text-align: justify;
+  padding: 20px 10px;
+}
+
+.biografia {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 60px;
+  gap: 4rem;
+}
+.biografia .img-bio {
+  width: 100%;
+  border-radius: 12rem;
+  object-fit: cover;
+}
+.biografia .texto-bio {
+  max-width: 1000px;
+}
+.biografia .texto-bio h2 {
+  color: #c2702d;
+}
+
+.galeria {
+  background-color: black;
+  padding-bottom: 40px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.galeria h2 {
+  color: #c2702d;
+}
+.galeria .fotos {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10px 80px;
+  gap: 2rem;
+}
+
+.visitanos {
+  max-width: auto;
+  max-height: 600px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #c2702d;
+  text-align: center;
+  gap: 1rem;
+}
+.visitanos .contacta {
+  background-color: black;
+  border-radius: 8rem;
+  padding: 40px 30px;
+  text-align: center;
+}
+
 #titulo {
   color: rgb(123, 51, 6);
   background-color: rgb(255, 248, 219);

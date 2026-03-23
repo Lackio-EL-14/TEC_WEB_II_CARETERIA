@@ -1,4 +1,5 @@
 @use "_variables.scss";
+@use "_home.scss";
 @use "_menu.scss";
 @use "_contact.scss";
 header {
@@ -58,6 +59,8 @@ nav {
         }
     }
 }
+
+
 
 .piePagina {
     background-color: rgb(33, 14, 2);
