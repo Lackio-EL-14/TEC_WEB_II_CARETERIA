@@ -2,6 +2,8 @@
 @use "_home.scss";
 @use "_menu.scss";
 @use "_contact.scss";
+
+
 header {
     width: 100%;
     position: fixed;
@@ -51,6 +53,24 @@ nav {
         justify-content:flex-end;
         gap: 10%;
         width: 50%;
+
+        @media (max-width: 767px) {
+        display: none; 
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        flex-direction: column;
+        padding: 20px 0;
+        text-align: center;
+        gap: 2rem;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+
+        &.menu-abierto {
+          display: flex; 
+        }
+    }
 
         a {
             text-decoration: none;
@@ -139,9 +159,3 @@ nav {
 
 
 
-.carrusel:hover {
-   
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0, 230, 255, 0.15); 
-  border-color: #00e6ff;
-}
