@@ -2,11 +2,17 @@
 @use "_home.scss";
 @use "_menu.scss";
 @use "_contact.scss";
+
 header {
     width: 100%;
     position: fixed;
     background-color: variables.$blanco ;
     top: 0;
+
+    #nav-links a.activo {
+        color: variables.$naranja_suave;
+        font-weight: bold;
+    }
 
 }
 
@@ -25,7 +31,7 @@ nav {
     align-items: center;
     margin-left: 5%;
     margin-right: 5%;
-    
+
     #logo {
         display: flex;
         align-items: center;
@@ -48,7 +54,7 @@ nav {
 
     #nav-links {
         display: flex;
-        justify-content:flex-end;
+        justify-content: flex-end;
         gap: 10%;
         width: 50%;
 
@@ -86,13 +92,14 @@ nav {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    img{
+
+    img {
         width: 25%;
     }
 }
 
 .tituloSeccion {
-    color:variables.$cafe_suave;
+    color: variables.$cafe_suave;
     margin-bottom: 10px;
 }
 
@@ -140,8 +147,8 @@ nav {
 
 
 .carrusel:hover {
-   
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0, 230, 255, 0.15); 
-  border-color: #00e6ff;
+
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 230, 255, 0.15);
+    border-color: #00e6ff;
 }

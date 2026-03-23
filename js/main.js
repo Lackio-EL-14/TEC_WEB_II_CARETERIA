@@ -1,3 +1,4 @@
+window.addEventListener("DOMContentLoaded", activarNav);
 const imagenesDOM = document.querySelectorAll('.carrusel');
 
 let imagenesRuta = [
@@ -47,4 +48,21 @@ function enviarFormulario() {
     document.getElementById("nombre").value = "";
     document.getElementById("email").value = "";
     document.getElementById("mensaje").value = "";
+}
+function activarNav() {
+    let paginaActual = window.location.pathname.split("/").pop();
+
+    if (paginaActual === "") {
+        paginaActual = "index.html";
+    }
+
+    let links = document.querySelectorAll("#nav-links a");
+
+    links.forEach(link => {
+        let href = link.getAttribute("href");
+
+        if (href === paginaActual) {
+            link.classList.add("activo");
+        }
+    });
 }
