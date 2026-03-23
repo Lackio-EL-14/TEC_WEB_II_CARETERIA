@@ -388,6 +388,10 @@ header {
   background-color: #ffffff;
   top: 0;
 }
+header #nav-links a.activo {
+  color: #c2702d;
+  font-weight: bold;
+}
 
 body {
   font-family: "Roboto", sans-serif;
