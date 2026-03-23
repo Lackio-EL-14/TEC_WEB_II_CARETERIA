@@ -77,7 +77,19 @@
     @include mixins.alinear-horizontal();
     padding: 10px 80px;
     gap: 2rem;
-  }
+
+    .carrusel {
+      border-radius: 2rem;
+    }
+
+    .carrusel:hover {
+      border-radius: 5rem;
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px gold; 
+      border-color: 3px solid;
+
+    }
+  } 
   
 }
 
@@ -97,3 +109,5 @@
     text-align: center;
   }
 }
+
+

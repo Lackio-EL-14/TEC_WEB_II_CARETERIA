@@ -80,6 +80,15 @@
   padding: 10px 80px;
   gap: 2rem;
 }
+.galeria .fotos .carrusel {
+  border-radius: 2rem;
+}
+.galeria .fotos .carrusel:hover {
+  border-radius: 5rem;
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px gold;
+  border-color: 3px solid;
+}
 
 .visitanos {
   max-width: auto;
@@ -448,6 +457,12 @@ nav #nav-links a {
   text-align: center;
   font-size: 14px;
   color: ffd27f;
+}
+
+.carrusel:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 230, 255, 0.15);
+  border-color: #00e6ff;
 }
 
 /*# sourceMappingURL=style.css.map */

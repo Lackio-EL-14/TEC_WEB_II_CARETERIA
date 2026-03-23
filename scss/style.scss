@@ -136,3 +136,12 @@ nav {
     font-size: 14px;
     color: variables.$naranja_leve;
 }
+
+
+
+.carrusel:hover {
+   
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 230, 255, 0.15); 
+  border-color: #00e6ff;
+}
