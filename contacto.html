@@ -75,12 +75,15 @@
         </div>
         <div id="formulario">
             <label for="nombre">Nombre Completo</label>
-            <input type="text">
+            <input type="text" id="nombre">
+
             <label for="email">Email</label>
-            <input type="email" name="" id="email">
-            <label for="">Mensaje</label>
-            <input type="text" name="" id="">
-            <button>Enviar Mensaje</button>
+            <input type="email" id="email">
+
+            <label for="mensaje">Mensaje</label>
+            <input type="text" id="mensaje">
+
+            <button onclick="enviarFormulario()">Enviar Mensaje</button>
         </div>
     </div>
     <div id="visitanos">
@@ -134,6 +137,8 @@
             © 2026 Café Infinito. Todos los derechos reservados.
         </p>
     </footer>
+    
+  <script src="js/main.js"></script>
 </body>
 
 </html>

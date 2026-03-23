@@ -16,3 +16,35 @@ function rotarCarrusel() {
 }
 
 setInterval(rotarCarrusel, 3000);
+
+function enviarFormulario() {
+    let nombre = document.getElementById("nombre").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let mensaje = document.getElementById("mensaje").value.trim();
+
+    if (nombre === "") {
+        alert("Por favor, ingresa tu nombre completo");
+        return;
+    }
+
+    if (email === "") {
+        alert("Por favor, ingresa tu email");
+        return;
+    }
+
+    if (mensaje === "") {
+        alert("Por favor, escribe un mensaje");
+        return;
+    }
+
+    if (!email.includes("@") || !email.includes(".")) {
+        alert("Ingresa un email válido");
+        return;
+    }
+
+    alert("Formulario enviado correctamente");
+
+    document.getElementById("nombre").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("mensaje").value = "";
+}
