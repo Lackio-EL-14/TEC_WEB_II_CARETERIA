@@ -1,45 +1,46 @@
 window.addEventListener("DOMContentLoaded", activarNav);
+document.addEventListener("DOMContentLoaded", buscarProductos);
 const imagenesDOM = document.querySelectorAll('.carrusel');
 
 let imagenesRuta = [
-  'img/cafe-galeria.png',
-  'img/masas-galeria.png',
-  'img/granos.png'
+    'img/cafe-galeria.png',
+    'img/masas-galeria.png',
+    'img/granos.png'
 ];
 
 function rotarCarrusel() {
-  let primero = imagenesRuta.shift();
-  imagenesRuta.push(primero);
+    let primero = imagenesRuta.shift();
+    imagenesRuta.push(primero);
 
-  for (let i = 0; i < imagenesDOM.length; i++) {
-    imagenesDOM[i].src = imagenesRuta[i];
-  }
+    for (let i = 0; i < imagenesDOM.length; i++) {
+        imagenesDOM[i].src = imagenesRuta[i];
+    }
 }
 
 setInterval(rotarCarrusel, 3000);
-
+/*
 const btnHamburguesa = document.getElementById('btn-menu');
 const menuEnlaces = document.getElementById('nav-links');
 
-btnHamburguesa.addEventListener('click', function() {
+btnHamburguesa.addEventListener('click', function () {
     menuEnlaces.classList.toggle('menu-abierto');
 });
 
 
 const btnSubir = document.getElementById('btn-subir');
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     if (window.scrollY > 300) {
-        btnSubir.classList.add('mostrar'); 
+        btnSubir.classList.add('mostrar');
     } else {
-        btnSubir.classList.remove('mostrar'); 
+        btnSubir.classList.remove('mostrar');
     }
 });
 
-btnSubir.addEventListener('click', function() {
+btnSubir.addEventListener('click', function () {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' 
+        behavior: 'smooth'
     });
 });
 
@@ -47,14 +48,14 @@ const btnAbrirModal = document.getElementById('btn-ver-menu');
 const modalMenu = document.getElementById('modal-menu');
 const btnCerrarModal = document.getElementById('btn-cerrar-modal');
 
-btnAbrirModal.addEventListener('click', function(evento) {
-    evento.preventDefault(); 
+btnAbrirModal.addEventListener('click', function (evento) {
+    evento.preventDefault();
     modalMenu.classList.add('modal-visible');
 });
 
-btnCerrarModal.addEventListener('click', function() {
-    modalMenu.classList.remove('modal-visible'); 
-});
+btnCerrarModal.addEventListener('click', function () {
+    modalMenu.classList.remove('modal-visible');
+});*/
 
 function enviarFormulario() {
     let nombre = document.getElementById("nombre").value.trim();
@@ -101,6 +102,34 @@ function activarNav() {
 
         if (href === paginaActual) {
             link.classList.add("activo");
+        }
+    });
+}
+function buscarProductos() {
+    const input = document.getElementById("buscadorInput");
+    const productos = document.querySelectorAll("article");
+    const mensaje = document.getElementById("mensajeVacio");
+
+    input.addEventListener("input", () => {
+        const texto = input.value.toLowerCase();
+        let hayResultados = false;
+
+        productos.forEach(producto => {
+            const textoProducto = producto.textContent.toLowerCase();
+
+            if (textoProducto.includes(texto)) {
+                producto.style.display = "";
+                hayResultados = true;
+            } else {
+                producto.style.display = "none";
+            }
+        });
+        console.log(mensaje)
+        // Mostrar u ocultar mensaje
+        if (hayResultados) {
+            mensaje.style.display = "none";
+        } else {
+            mensaje.style.display = "block";
         }
     });
 }

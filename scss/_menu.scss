@@ -37,6 +37,50 @@
     }
 
 }
+.buscador {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    input {
+        width: 100%;
+        padding: 12px 40px 12px 15px;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        background: variables.$blanco;
+        font-size: 16px;
+        transition: 0.3s ease;
+
+        &:focus {
+            background:variables.$blanco;
+            box-shadow: 0 0 0 2px variables.$naranja_suave;
+        }
+    }
+
+    .icono {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 40px;
+        border-radius: 50px;
+        background-color: variables.$naranja_suave;
+    }
+    @media (max-width: 768px) {
+    .buscador {
+        max-width: 90%;
+
+        input {
+            font-size: 14px;
+            padding: 10px 35px 10px 12px;
+        }
+    }
+}
+}
 .bebidas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -119,4 +163,11 @@
         padding-left: 2%;
     }
   }
+}
+#mensajeVacio {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+    font-size: 18px;
 }
