@@ -9,6 +9,7 @@ header {
     position: fixed;
     background-color: variables.$blanco ;
     top: 0;
+    z-index: 1000;
 
     #nav-links a.activo {
         color: variables.$naranja_suave;

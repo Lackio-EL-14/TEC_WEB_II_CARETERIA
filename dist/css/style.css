@@ -387,6 +387,7 @@ header {
   position: fixed;
   background-color: #ffffff;
   top: 0;
+  z-index: 1000;
 }
 header #nav-links a.activo {
   color: #c2702d;
@@ -527,6 +528,12 @@ nav #nav-links a {
   text-align: center;
   font-size: 14px;
   color: ffd27f;
+}
+
+.carrusel:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 230, 255, 0.15);
+  border-color: gold;
 }
 
 /*# sourceMappingURL=style.css.map */
