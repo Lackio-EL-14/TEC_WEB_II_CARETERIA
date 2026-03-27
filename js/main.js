@@ -18,44 +18,54 @@ function rotarCarrusel() {
 }
 
 setInterval(rotarCarrusel, 3000);
-/*
-const btnHamburguesa = document.getElementById('btn-menu');
-const menuEnlaces = document.getElementById('nav-links');
 
-btnHamburguesa.addEventListener('click', function () {
-    menuEnlaces.classList.toggle('menu-abierto');
-});
+document.addEventListener("DOMContentLoaded", () => {
 
+    const btnHamburguesa = document.getElementById('btn-menu');
+    const menuEnlaces = document.getElementById('nav-links');
 
-const btnSubir = document.getElementById('btn-subir');
-
-window.addEventListener('scroll', function () {
-    if (window.scrollY > 300) {
-        btnSubir.classList.add('mostrar');
-    } else {
-        btnSubir.classList.remove('mostrar');
+    if (btnHamburguesa && menuEnlaces) {
+        btnHamburguesa.addEventListener('click', function () {
+            menuEnlaces.classList.toggle('menu-abierto');
+        });
     }
+
+    const btnSubir = document.getElementById('btn-subir');
+
+    if (btnSubir) {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+                btnSubir.classList.add('mostrar');
+            } else {
+                btnSubir.classList.remove('mostrar');
+            }
+        });
+
+        btnSubir.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    const btnAbrirModal = document.getElementById('btn-ver-menu');
+    const modalMenu = document.getElementById('modal-menu');
+    const btnCerrarModal = document.getElementById('btn-cerrar-modal');
+
+    if (btnAbrirModal && modalMenu && btnCerrarModal) {
+        btnAbrirModal.addEventListener('click', function (evento) {
+            evento.preventDefault();
+            modalMenu.classList.add('modal-visible');
+        });
+
+        btnCerrarModal.addEventListener('click', function () {
+            modalMenu.classList.remove('modal-visible');
+        });
+    }
+
+
 });
-
-btnSubir.addEventListener('click', function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-const btnAbrirModal = document.getElementById('btn-ver-menu');
-const modalMenu = document.getElementById('modal-menu');
-const btnCerrarModal = document.getElementById('btn-cerrar-modal');
-
-btnAbrirModal.addEventListener('click', function (evento) {
-    evento.preventDefault();
-    modalMenu.classList.add('modal-visible');
-});
-
-btnCerrarModal.addEventListener('click', function () {
-    modalMenu.classList.remove('modal-visible');
-});*/
 
 function enviarFormulario() {
     let nombre = document.getElementById("nombre").value.trim();

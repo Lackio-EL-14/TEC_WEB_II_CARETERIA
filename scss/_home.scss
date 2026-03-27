@@ -42,31 +42,48 @@
   }
 }
 
-.biografia{
-  @include mixins.alinear-horizontal(row nowrap, center, center);
+.biografia {
+  @include mixins.alinear-horizontal(row nowrap, space-between, center);
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 60px;
+  padding: 80px 5%; 
   gap: 4rem;
   
-  .img-bio{
-   width: 100%; 
-   border-radius: 12rem;
-   object-fit: cover;
-  }
-
-  .texto-bio{ 
-    max-width: 1000px;
-
-    h2{
-      color: variables.$naranja_suave;
-    }
-
+  .img-bio {
+    flex: 1; 
+    max-width: 500px; 
     
+    img {
+      width: 100%; 
+      border-radius: 2rem; 
+      object-fit: cover;
+    }
   }
 
-}
+  .texto-bio { 
+    flex: 1; 
+    max-width: 600px;
 
+    h2 {
+      color: variables.$naranja_suave;
+      margin-bottom: 1.5rem; 
+    }
+    
+    p {
+      line-height: 1.6; 
+    }
+  }
+
+  @media (max-width: 768px) { 
+    flex-direction: column; 
+    text-align: center;
+    gap: 2rem; 
+    
+    .img-bio, .texto-bio {
+      max-width: 100%;
+    }
+  }
+}
 
 .galeria{
   background-color: black;
